@@ -1,595 +1,436 @@
-<?php
-// Datos personales y artículos centralizados en un solo archivo
-$perfil = [
-    "nombre" => "Diarly Tatiana Cabanillas Polo",
-    "titulo_blog" => "DIARLY TATIANA | BLOG",
-    "subtitulo" => "Ingeniería de Sistemas e Informática • Décimo Ciclo • UNS",
-    "ubicacion" => "Nuevo Chimbote, Áncash - Perú",
-    "fecha" => "Miércoles, 18 de Noviembre de 2026",
-    "bio_corta" => "Estudiante de 10mo ciclo en la Universidad Nacional del Santa. Apasionada por el análisis de datos, el desarrollo de software móvil y web, la arquitectura empresarial y las tecnologías en la nube.",
-    "correo" => "tatiana.cp.ing@gmail.com",
-    "github" => "https://github.com/DiarlyCP",
-    "foto" => "perfil.png"
-];
-
-$portada = [
-    "kicker" => "Bitácora Académica & Tecnológica 2026",
-    "titulo" => "Construyendo soluciones digitales desde la Ingeniería de Sistemas",
-    "resumen" => "Un espacio personal donde comparto mis aprendizajes en el décimo ciclo universitario, proyectos de desarrollo móvil y web, análisis de datos, experiencias internacionales y reflexiones sobre tecnología."
-];
-
-$secciones = [
-    "datos" => [
-        "tag" => "Análisis de Datos",
-        "titulo" => "¿Por qué me interesa el análisis de datos en Ingeniería de Sistemas?",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "15 Nov 2026",
-        "resumen" => "A lo largo de la carrera vemos código y bases de datos, pero entender qué nos dicen esos números para tomar decisiones estratégicas en organizaciones reales es lo que más me apasiona."
-    ],
-    "decimo" => [
-        "tag" => "Décimo Ciclo",
-        "titulo" => "Lo que aprendí llegando al décimo ciclo de Ingeniería de Sistemas",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "10 Nov 2026",
-        "resumen" => "Un repaso por los retos de los últimos semestres en la UNS, la gestión de proyectos de tesis, el trabajo en equipo y cómo aplicamos la ingeniería de software a problemas reales."
-    ],
-    "movil" => [
-        "tag" => "Desarrollo Móvil & IA",
-        "titulo" => "PetPoint: Integrando Kotlin, Firebase y visión artificial para ayudar mascotas",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "04 Nov 2026",
-        "resumen" => "El proceso de diseñar una aplicación nativa en Android Studio con arquitectura MVVM, Google Maps y modelos de reconocimiento para reunir mascotas perdidas en Chimbote y Nuevo Chimbote."
-    ],
-    "web" => [
-        "tag" => "Desarrollo Web & Cloud",
-        "titulo" => "Desplegando aplicaciones PHP en Vercel con flujo continuo en GitHub",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "28 Oct 2026",
-        "resumen" => "Cómo estructurar proyectos web en PHP y llevarlos a producción en la nube utilizando repositorios de GitHub y entornos serverless modernos."
-    ],
-    "arquitectura" => [
-        "tag" => "Arquitectura Empresarial",
-        "titulo" => "Modernización de procesos con TOGAF ADM y modelado ArchiMate",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "20 Oct 2026",
-        "resumen" => "La importancia de alinear las capas de negocio, aplicación y tecnología al analizar la transformación digital en instituciones públicas y administración municipal."
-    ],
-    "experiencia" => [
-        "tag" => "Experiencia Académica",
-        "titulo" => "Aprendizajes de mis pasantías e intercambios universitarios",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "14 Oct 2026",
-        "resumen" => "Desde la pasantía internacional en la Universidad de La Laguna en Tenerife hasta las experiencias académicas y pre-profesionales que marcaron mi crecimiento profesional."
-    ],
-    "hackathon" => [
-        "tag" => "Innovación Cívica",
-        "titulo" => "Participación en Hackatones y laboratorios de emprendimiento",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "05 Oct 2026",
-        "resumen" => "El valor de colaborar bajo presión para prototipar soluciones tecnológicas con impacto social, validando ideas desde la perspectiva del usuario."
-    ],
-    "personal" => [
-        "tag" => "Personal & Equilibrio",
-        "titulo" => "Entre código, diseño y música: cómo desconecto en mis tiempos libres",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "28 Sep 2026",
-        "resumen" => "No todo es código y servidores: explorar herramientas de diseño gráfico, disfrutar de buena música y compartir tiempo en familia son mi mejor recarga de energía."
-    ],
-    "cloud" => [
-        "tag" => "Cloud Computing & Redes",
-        "titulo" => "Explorando máquinas virtuales, Linux y servicios en Google Cloud",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "18 Sep 2026",
-        "resumen" => "Prácticas de despliegue en instancias Compute Engine, redes VPC, administración de servidores Linux y contenedores Docker."
-    ],
-    "sistemas" => [
-        "tag" => "Sistemas de Gestión",
-        "titulo" => "Digitalización y seguimiento documental con PHP y MySQL",
-        "autor" => "Diarly Cabanillas",
-        "fecha" => "10 Sep 2026",
-        "resumen" => "Cómo el diseño de bases de datos relacionales bien estructuradas agiliza la atención al ciudadano y el control de expedientes administrativos."
-    ]
-];
-?>
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Blog Personal de Diarly Tatiana Cabanillas Polo - Ingeniería de Sistemas e Informática">
-    <meta name="author" content="Diarly Tatiana Cabanillas Polo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Diarly Tatiana Cabanillas Polo">
+  <meta name="description" content="Portafolio y blog académico de Diarly Tatiana Cabanillas Polo, estudiante de Ingeniería de Sistemas e Informática en la UNS. Proyectos, experiencias y CV.">
+  <meta name="theme-color" content="#fbf9f6">
+  <title>Diarly Tatiana Cabanillas Polo · Portafolio & Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fbf9f6;
+      --white: #ffffff;
+      --ink: #1f1a1d;
+      --muted: #594e54;
+      --accent: #7c2d3e;       /* Borgoña / Vino elegante */
+      --accent-dark: #591c2a;
+      --soft-tint: #f3e8eb;    /* Rosa pálido editorial */
+      --warm-badge: #f5ebd6;   /* Crema dorado suave */
+      --line: #e4dce0;
+      --display: "Instrument Serif", Georgia, serif;
+      --body: "DM Sans", system-ui, sans-serif;
+    }
 
-    <title>DIARLY TATIANA | Blog Personal 2026</title>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 1rem/1.65 var(--body); }
+    button { font: inherit; }
+    a { color: inherit; text-underline-offset: .22em; }
+    img { display: block; width: 100%; height: auto; }
+    h1, h2, h3, p, figure { margin: 0; }
+    h1, h2, h3 { text-wrap: balance; }
+    :focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    [id] { scroll-margin-top: 6rem; }
+    .wrap { width: min(calc(100% - 3rem), 1136px); margin-inline: auto; }
+    .skip { position: fixed; z-index: 10; left: 1rem; top: 1rem; padding: .5rem 1rem; background: var(--white); transform: translateY(-200%); }
+    .skip:focus { transform: none; }
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    /* Cabecera */
+    .header { position: sticky; top: 0; z-index: 5; background: #fbf9f6f2; border-bottom: 1px solid var(--line); backdrop-filter: blur(12px); }
+    .header-inner { min-height: 70px; display: flex; justify-content: space-between; align-items: center; gap: 1.1rem; }
+    .brand { display: inline-flex; align-items: center; gap: .65rem; font-weight: 700; text-decoration: none; white-space: nowrap; }
+    .monogram { display: grid; place-items: center; width: 2.3rem; aspect-ratio: 1; color: var(--accent); background: var(--soft-tint); border: 1px solid #dec6cd; border-radius: 50%; font: 1.2rem/1 var(--display); }
+    nav ul { display: flex; flex-wrap: wrap; gap: .65rem clamp(.85rem, 2vw, 1.8rem); list-style: none; margin: 0; padding: 0; }
+    nav a { color: var(--muted); font-size: .88rem; font-weight: 700; text-decoration: none; transition: color .2s; }
+    nav a:hover { color: var(--accent); text-decoration: underline; }
 
-    <style>
-      :root {
-        --blog-primary: #1d4ed8;       /* Azul cobalto profesional */
-        --blog-primary-dark: #1e3a8a;  /* Azul marino profundo */
-        --blog-accent: #0ea5e9;        /* Celeste vibrante */
-        --blog-dark: #0f172a;          /* Pizarra oscuro */
-        --blog-gray-bg: #f1f5f9;       /* Fondo gris suave */
-        --blog-border: #e2e8f0;
-      }
+    /* Hero */
+    .hero { display: grid; grid-template-columns: minmax(0, 1.32fr) minmax(0, 1fr); gap: clamp(1.6rem, 6vw, 5.5rem); align-items: center; padding-block: clamp(2.7rem, 7vw, 6rem) clamp(3rem, 7vw, 5.2rem); }
+    .hero-copy { animation: arrive .7s ease-out both; }
+    .overline { display: flex; align-items: center; gap: .55rem; margin-bottom: .9rem; color: var(--accent); font-size: .74rem; font-weight: 700; letter-spacing: .12em; line-height: 1.35; text-transform: uppercase; }
+    .overline::before { content: ""; width: .55rem; height: .55rem; flex: none; border-radius: 50%; background: var(--accent); }
+    h1 { font: 400 clamp(3.4rem, 7.5vw, 6.6rem)/.88 var(--display); letter-spacing: -.025em; }
+    h1 em { display: block; color: var(--accent); font-weight: 400; }
+    .intro { max-width: 50ch; margin-top: 1.45rem; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.15rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 46px; padding: .6rem 1.2rem; border: 1px solid var(--accent); border-radius: 100px; color: var(--accent); background: transparent; cursor: pointer; font-size: .88rem; font-weight: 700; text-decoration: none; transition: transform .22s ease, background .22s ease, color .22s ease; }
+    .button.primary { color: #fff; background: var(--accent); }
+    .button:hover { transform: translateY(-2px); background: var(--soft-tint); }
+    .button.primary:hover { background: var(--accent-dark); color: #fff; }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    /* Retrato */
+    .portrait { position: relative; isolation: isolate; width: 100%; max-width: 370px; justify-self: center; padding: .65rem .65rem 0; animation: arrive .75s .12s ease-out both; }
+    .portrait::before { content: ""; position: absolute; z-index: -1; inset: -2% -5% 6% 4%; border-radius: 49% 49% 20px 20px; background: var(--soft-tint); transform: rotate(6deg); }
+    .portrait::after { content: ""; position: absolute; z-index: 1; width: clamp(36px, 7vw, 68px); aspect-ratio: 1; right: -4%; top: 8%; border-radius: 50%; background: var(--warm-badge); border: 5px solid var(--paper); pointer-events: none; }
+    .portrait img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top center; border-radius: 46% 46% 17px 17px / 28% 28% 17px 17px; background: var(--white); box-shadow: 0 12px 28px rgba(31, 26, 29, 0.08); }
+    @keyframes arrive { from { opacity: .72; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        background-color: var(--blog-gray-bg);
-        color: #1e293b;
-      }
+    /* Secciones */
+    .section { padding-block: clamp(3rem, 6vw, 5.2rem); border-top: 1px solid var(--line); }
+    .section h2 { font: 400 clamp(2.5rem, 5vw, 4.5rem)/.98 var(--display); letter-spacing: -.015em; }
+    .section-intro { max-width: 62ch; margin-top: .75rem; color: var(--muted); }
 
-      /* Barra superior institucional */
-      .top-utility-bar {
-        background-color: var(--blog-dark);
-        color: #cbd5e1;
-        font-size: 0.8rem;
-        padding: 7px 0;
-      }
+    /* Proyecto Destacado */
+    .project { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .95fr); align-items: stretch; margin-top: 1.75rem; overflow: hidden; border: 1px solid var(--line); border-radius: 24px; background: var(--white); }
+    .project-copy { align-self: center; padding: clamp(1.5rem, 4vw, 3.2rem); }
+    .meta { color: var(--accent); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .project h3, .card h3, .resume-side h3 { margin-top: .28rem; font: 400 clamp(1.9rem, 3.5vw, 2.95rem)/1.05 var(--display); }
+    .project p + p, .card p + p { margin-top: .7rem; }
+    .project h3 + p, .card h3 + p { margin-top: .7rem; }
+    .copy { color: var(--muted); }
+    .tags { display: flex; flex-wrap: wrap; gap: .4rem; padding: 0; margin: 1.1rem 0 0; list-style: none; }
+    .tags li { padding: .26rem .68rem; border: 1px solid #e3cbd2; border-radius: 100px; background: #faf2f4; color: var(--accent); font-size: .76rem; font-weight: 700; }
 
-      .status-badge {
-        background-color: var(--blog-primary);
-        color: #fff;
-        font-weight: 700;
-        padding: 3px 9px;
-        border-radius: 4px;
-        font-size: 0.72rem;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-      }
+    /* Panel visual del proyecto destacado */
+    .project-highlight-box { background: linear-gradient(145deg, var(--soft-tint) 0%, #f6efe9 100%); padding: clamp(1.5rem, 3.5vw, 2.5rem); display: flex; flex-direction: column; justify-content: center; gap: 1rem; border-left: 1px solid var(--line); }
+    .mini-stat { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1.1rem 1.25rem; }
+    .mini-stat strong { display: block; color: var(--accent); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .25rem; }
+    .mini-stat p { font-size: .92rem; color: var(--ink); line-height: 1.45; }
 
-      /* Cabecera principal con foto de perfil */
-      .main-header {
-        background-color: #ffffff;
-        border-bottom: 3px solid var(--blog-primary);
-        padding: 20px 0;
-      }
+    /* Grilla de 2 columnas */
+    .two-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; margin-top: 1.1rem; }
+    .card { padding: clamp(1.35rem, 3vw, 2.1rem); border: 1px solid var(--line); border-radius: 20px; background: var(--white); transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(31, 26, 29, 0.05); }
+    .card h3 { font-size: clamp(1.7rem, 3vw, 2.25rem); }
+    .card.soft { background: #f6f2f4; border-color: #e4d8dd; }
 
-      .profile-avatar {
-        width: 82px;
-        height: 82px;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: top;
-        border: 3px solid var(--blog-primary);
-        box-shadow: 0 4px 10px rgba(29, 78, 216, 0.18);
-      }
+    /* CV / Currículum */
+    .cv-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .9rem; }
+    .resume { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, .85fr); gap: 1.1rem; margin-top: 1.5rem; }
+    .resume-side { padding: clamp(1.35rem, 3.6vw, 2.25rem); border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .resume-side.skills { background: var(--soft-tint); border-color: #e0cbd2; }
+    .resume-side h3 { margin: 0 0 .6rem; font-size: clamp(1.8rem, 3vw, 2.45rem); }
+    .resume-side h3:not(:first-child) { margin-top: 1.35rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+    .resume-list { list-style: none; padding: 0; margin: 0; }
+    .resume-list li + li { margin-top: .7rem; }
+    .resume-list span { display: block; color: var(--muted); font-size: .88rem; }
+    .skills dl { margin: 0; }
+    .skills dl div { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-block: .52rem; border-bottom: 1px solid #dec6cd; }
+    .skills dt { font-weight: 700; }
+    .skills dd { margin: 0; color: var(--muted); font-size: .9rem; text-align: right; }
+    .print-name { display: none; }
 
-      .brand-logo {
-        font-family: 'Plus Jakarta Sans', sans-serif;
-        font-weight: 800;
-        font-size: 1.95rem;
-        color: var(--blog-dark) !important;
-        letter-spacing: -0.5px;
-        text-decoration: none !important;
-        line-height: 1.1;
-      }
+    /* Footer */
+    .footer { border-top: 1px solid var(--line); padding-block: 1.6rem; }
+    .footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem 1rem; }
+    .footer p, .footer a { color: var(--muted); font-size: .88rem; }
 
-      .brand-logo span {
-        color: var(--blog-primary);
-      }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 1.2rem; }
+      h1 { font-size: clamp(2.9rem, 8vw, 4.6rem); }
+      .project { grid-template-columns: minmax(0, 1fr); }
+      .project-highlight-box { border-left: 0; border-top: 1px solid var(--line); }
+    }
 
-      .brand-subtitle {
-        font-size: 0.85rem;
-        font-weight: 600;
-        color: #475569;
-        margin-top: 4px;
-      }
+    @media (max-width: 580px) {
+      .wrap { width: calc(100% - 2rem); }
+      [id] { scroll-margin-top: 8rem; }
+      .header-inner { flex-direction: column; align-items: start; gap: .3rem; padding-block: .5rem .6rem; }
+      nav ul { gap: .25rem .95rem; }
+      nav a { font-size: .8rem; }
+      .hero, .two-columns, .resume { grid-template-columns: minmax(0, 1fr); }
+      .hero { gap: 1.6rem; }
+      .portrait { width: min(82%, 270px); }
+    }
 
-      .btn-contact-header {
-        background-color: #eff6ff;
-        color: var(--blog-primary);
-        border: 1px solid #bfdbfe;
-        font-weight: 700;
-        font-size: 0.82rem;
-        padding: 8px 16px;
-        border-radius: 6px;
-        transition: all 0.2s;
-        text-decoration: none !important;
-        display: inline-block;
-      }
+    @media print {
+      @page { margin: 15mm; }
+      body { background: white; color: black; font-size: 10.5pt; }
+      .header, .skip, .footer, main > :not(#cv), #print-cv { display: none !important; }
+      #cv { width: 100%; padding: 0; border: 0; }
+      #cv .section-intro { color: black; }
+      #cv h2 { font-size: 22pt; }
+      .print-name { display: block; margin-bottom: .55rem; font-size: 17pt; font-weight: bold; }
+      .resume { display: block; margin-top: 1rem; }
+      .resume-side, .resume-side.skills { padding: 0; border: 0; background: white; }
+      .resume-side + .resume-side { margin-top: 1rem; }
+      .resume-side h3, .resume-side h3:not(:first-child) { padding: 0; border: 0; font-size: 14pt; }
+      .resume-list span, .skills dd { color: black; }
+      .skills dl div { padding-block: .17rem; max-width: 24rem; }
+    }
+  </style>
+</head>
+<body id="inicio">
+  <a class="skip" href="#contenido">Ir al contenido</a>
 
-      .btn-contact-header:hover {
-        background-color: var(--blog-primary);
-        color: #ffffff;
-      }
-
-      /* Barra de navegación */
-      .nav-blog {
-        background-color: var(--blog-primary);
-        box-shadow: 0 3px 8px rgba(15, 23, 42, 0.12);
-      }
-
-      .nav-blog .nav-link {
-        color: #ffffff !important;
-        font-weight: 700;
-        font-size: 0.83rem;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-        padding: 12px 16px;
-        transition: background 0.2s;
-      }
-
-      .nav-blog .nav-link:hover {
-        background-color: var(--blog-primary-dark);
-      }
-
-      /* Portada Hero */
-      .hero-portada {
-        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-        border-left: 6px solid var(--blog-accent);
-        color: #ffffff;
-        border-radius: 8px;
-        padding: 2.25rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1.75rem;
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
-      }
-
-      .hero-kicker {
-        display: inline-block;
-        background-color: var(--blog-accent);
-        color: #0f172a;
-        font-weight: 800;
-        font-size: 0.74rem;
-        text-transform: uppercase;
-        padding: 4px 12px;
-        border-radius: 4px;
-        margin-bottom: 12px;
-        letter-spacing: 0.6px;
-      }
-
-      .hero-portada h1 {
-        font-family: 'Merriweather', serif;
-        font-weight: 900;
-        font-size: 2rem;
-        line-height: 1.3;
-        margin-bottom: 0.75rem;
-      }
-
-      .hero-portada p.lead {
-        font-size: 1.08rem;
-        color: #e2e8f0;
-        font-weight: 400;
-        margin-bottom: 0;
-      }
-
-      /* Tarjetas de artículos */
-      .blog-card {
-        background-color: #ffffff;
-        border: 1px solid var(--blog-border);
-        border-top: 4px solid var(--blog-primary);
-        border-radius: 8px;
-        height: 100%;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-
-      .blog-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
-      }
-
-      .section-tag {
-        display: inline-block;
-        background-color: #eff6ff;
-        color: var(--blog-primary);
-        font-weight: 700;
-        font-size: 0.74rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        padding: 3px 10px;
-        border-radius: 4px;
-        margin-bottom: 10px;
-      }
-
-      .blog-title {
-        font-family: 'Merriweather', serif;
-        font-weight: 700;
-        font-size: 1.12rem;
-        line-height: 1.4;
-        margin-bottom: 8px;
-        color: #0f172a;
-      }
-
-      .blog-meta {
-        font-size: 0.78rem;
-        color: #64748b;
-        font-weight: 600;
-        margin-bottom: 12px;
-      }
-
-      .blog-summary {
-        font-size: 0.93rem;
-        color: #334155;
-        line-height: 1.6;
-      }
-
-      .section-divider {
-        border-left: 4px solid var(--blog-primary);
-        padding-left: 12px;
-        font-weight: 800;
-        font-size: 1.15rem;
-        text-transform: uppercase;
-        letter-spacing: 0.4px;
-        color: #0f172a;
-        margin: 2rem 0 1.15rem 0;
-      }
-
-      /* Tarjeta Sobre Mí */
-      .about-box {
-        background-color: #ffffff;
-        border: 1px solid var(--blog-border);
-        border-radius: 8px;
-        padding: 1.75rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      }
-
-      .about-photo-lg {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: top;
-        border: 4px solid var(--blog-primary);
-      }
-
-      .skill-pill {
-        display: inline-block;
-        background-color: #f1f5f9;
-        color: #1e293b;
-        border: 1px solid #cbd5e1;
-        font-size: 0.8rem;
-        font-weight: 600;
-        padding: 4px 12px;
-        border-radius: 20px;
-        margin: 3px 4px 3px 0;
-      }
-
-      /* Footer */
-      .site-footer {
-        background-color: var(--blog-dark);
-        color: #94a3b8;
-        padding: 2.25rem 0;
-        margin-top: 3.5rem;
-        border-top: 4px solid var(--blog-primary);
-        font-size: 0.88rem;
-      }
-
-      .site-footer strong {
-        color: #ffffff;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Barra superior -->
-    <div class="top-utility-bar">
-      <div class="container d-flex justify-content-between align-items-center">
-        <div>
-          <span class="status-badge mr-2">PORTAFOLIO & BLOG</span>
-          <span><?php echo $perfil["fecha"]; ?> &bull; <?php echo $perfil["ubicacion"]; ?></span>
-        </div>
-        <div class="d-none d-md-block">
-          <span>Ingeniería de Sistemas e Informática</span>
-        </div>
-      </div>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio"><span class="monogram" aria-hidden="true">DT</span> Diarly Tatiana</a>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#blog">Bitácora</a></li>
+          <li><a href="#cv">CV</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Cabecera Principal con Foto -->
-    <header class="main-header">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-8 d-flex align-items-center justify-content-center justify-content-md-start">
-            <img src="<?php echo $perfil["foto"]; ?>" alt="Diarly Tatiana" class="profile-avatar mr-3">
-            <div>
-              <a class="brand-logo" href="#inicio">DIARLY <span>TATIANA</span></a>
-              <div class="brand-subtitle"><?php echo $perfil["subtitulo"]; ?></div>
-            </div>
-          </div>
-          <div class="col-md-4 text-center text-md-right mt-3 mt-md-0">
-            <a href="#sobre-mi" class="btn-contact-header">Conoce mi perfil &darr;</a>
-          </div>
+  <main id="contenido">
+    <!-- Hero Principal -->
+    <section class="wrap hero" aria-labelledby="nombre">
+      <div class="hero-copy">
+        <p class="overline">Portafolio &amp; Bitácora · Nuevo Chimbote, Perú</p>
+        <h1 id="nombre">Diarly Tatiana <em>Cabanillas Polo</em></h1>
+        <p class="intro">Estudio Ingeniería de Sistemas e Informática en la Universidad Nacional del Santa (10.º ciclo). Me apasiona el análisis de datos, el desarrollo de software móvil y web, y la arquitectura empresarial aplicada a soluciones reales.</p>
+        <div class="actions">
+          <a class="button primary" href="#proyectos">Ver mis proyectos <span aria-hidden="true">↘</span></a>
+          <a class="button" href="#cv">Consultar mi CV</a>
         </div>
       </div>
-    </header>
+      <figure class="portrait">
+        <img src="Foto cv 1.png" alt="Retrato profesional de Diarly Tatiana Cabanillas Polo">
+      </figure>
+    </section>
 
-    <!-- Menú de Secciones -->
-    <nav class="navbar navbar-expand-lg nav-blog p-0 sticky-top">
-      <div class="container">
-        <button class="navbar-toggler text-white py-2" type="button" data-toggle="collapse" data-target="#navbarSecciones">
-          &#9776; Secciones del Blog
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSecciones">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#datos-decimo">Datos &amp; 10mo Ciclo</a></li>
-            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos Software</a></li>
-            <li class="nav-item"><a class="nav-link" href="#arquitectura-exp">Arquitectura &amp; Experiencias</a></li>
-            <li class="nav-item"><a class="nav-link" href="#cloud-sistemas">Cloud &amp; Sistemas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#personal">Personal</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+    <!-- Sección Proyectos -->
+    <section class="wrap section" id="proyectos" aria-labelledby="titulo-proyectos">
+      <h2 id="titulo-proyectos">Proyectos destacados</h2>
+      <p class="section-intro">Sistemas móviles, plataformas web y propuestas tecnológicas desarrolladas durante los últimos semestres de carrera e iniciativas de innovación.</p>
+
+      <!-- Proyecto Principal -->
+      <article class="project">
+        <div class="project-copy">
+          <p class="meta">Proyecto Móvil &amp; Visión Artificial · 2026</p>
+          <h3>PetPoint</h3>
+          <p class="copy">Aplicación móvil nativa para Android diseñada para identificar, geolocalizar y reunir mascotas perdidas en Chimbote y Nuevo Chimbote. Integra modelos de inteligencia artificial para reconocimiento visual y mapas en tiempo real.</p>
+          <p class="copy">Desarrollada bajo arquitectura MVVM con sincronización en la nube y almacenamiento local para garantizar respuesta rápida en campo.</p>
+          <ul class="tags">
+            <li>Kotlin</li>
+            <li>Android Studio</li>
+            <li>YOLOv8 &amp; DINOv2</li>
+            <li>Firebase</li>
+            <li>Google Maps SDK</li>
+            <li>MVVM</li>
           </ul>
         </div>
-      </div>
-    </nav>
-
-    <main class="container" id="inicio">
-      <!-- Portada Hero -->
-      <section class="hero-portada">
-        <span class="hero-kicker"><?php echo $portada["kicker"]; ?></span>
-        <h1><?php echo $portada["titulo"]; ?></h1>
-        <p class="lead"><?php echo $portada["resumen"]; ?></p>
-      </section>
-
-      <!-- Sección 1: Datos y Décimo Ciclo -->
-      <div class="section-divider" id="datos-decimo">Análisis de Datos y Vida Universitaria</div>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["datos"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["datos"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["datos"]["autor"]; ?> &bull; <?php echo $secciones["datos"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["datos"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["decimo"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["decimo"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["decimo"]["autor"]; ?> &bull; <?php echo $secciones["decimo"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["decimo"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Sección 2: Proyectos de Software -->
-      <div class="section-divider" id="proyectos">Desarrollo Móvil y Web</div>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["movil"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["movil"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["movil"]["autor"]; ?> &bull; <?php echo $secciones["movil"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["movil"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["web"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["web"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["web"]["autor"]; ?> &bull; <?php echo $secciones["web"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["web"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Sección 3: Arquitectura y Experiencias -->
-      <div class="section-divider" id="arquitectura-exp">Arquitectura Empresarial y Trayectoria</div>
-      <div class="row">
-        <div class="col-md-6 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["arquitectura"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["arquitectura"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["arquitectura"]["autor"]; ?> &bull; <?php echo $secciones["arquitectura"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["arquitectura"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-6 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["experiencia"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["experiencia"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["experiencia"]["autor"]; ?> &bull; <?php echo $secciones["experiencia"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["experiencia"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Sección 4: Cloud, Sistemas e Innovación -->
-      <div class="section-divider" id="cloud-sistemas">Cloud Computing, Sistemas e Innovación</div>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["cloud"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["cloud"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["cloud"]["autor"]; ?> &bull; <?php echo $secciones["cloud"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["cloud"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["sistemas"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["sistemas"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["sistemas"]["autor"]; ?> &bull; <?php echo $secciones["sistemas"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["sistemas"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["hackathon"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["hackathon"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["hackathon"]["autor"]; ?> &bull; <?php echo $secciones["hackathon"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["hackathon"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Sección 5: Personal y Sobre Mí -->
-      <div class="section-divider" id="personal">Rincón Personal y Perfil de Autora</div>
-      <div class="row">
-        <div class="col-md-5 mb-4">
-          <article class="card blog-card">
-            <div class="card-body d-flex flex-column">
-              <div><span class="section-tag"><?php echo $secciones["personal"]["tag"]; ?></span></div>
-              <h3 class="blog-title"><?php echo $secciones["personal"]["titulo"]; ?></h3>
-              <div class="blog-meta">Por <?php echo $secciones["personal"]["autor"]; ?> &bull; <?php echo $secciones["personal"]["fecha"]; ?></div>
-              <p class="blog-summary mb-0"><?php echo $secciones["personal"]["resumen"]; ?></p>
-            </div>
-          </article>
-        </div>
-
-        <div class="col-md-7 mb-4" id="sobre-mi">
-          <div class="about-box h-100">
-            <div class="d-flex flex-column flex-sm-row align-items-center align-items-sm-start">
-              <img src="<?php echo $perfil["foto"]; ?>" alt="Diarly Tatiana Cabanillas Polo" class="about-photo-lg mb-3 mb-sm-0 mr-sm-4">
-              <div>
-                <span class="section-tag">Sobre la autora</span>
-                <h4 class="font-weight-bold mb-1" style="color: #0f172a;"><?php echo $perfil["nombre"]; ?></h4>
-                <p class="text-muted small mb-2"><?php echo $perfil["subtitulo"]; ?></p>
-                <p class="blog-summary mb-3"><?php echo $perfil["bio_corta"]; ?></p>
-                
-                <div class="mb-3">
-                  <span class="skill-pill">Kotlin &amp; Android</span>
-                  <span class="skill-pill">PHP &amp; MySQL</span>
-                  <span class="skill-pill">Análisis de Datos</span>
-                  <span class="skill-pill">Google Cloud</span>
-                  <span class="skill-pill">TOGAF / ArchiMate</span>
-                </div>
-
-                <div class="small">
-                  <strong>Correo:</strong> <a href="mailto:<?php echo $perfil["correo"]; ?>"><?php echo $perfil["correo"]; ?></a> &bull;
-                  <strong>GitHub:</strong> <a href="<?php echo $perfil["github"]; ?>" target="_blank">DiarlyCP</a>
-                </div>
-              </div>
-            </div>
+        <div class="project-highlight-box">
+          <div class="mini-stat">
+            <strong>Enfoque Técnico</strong>
+            <p>Reconocimiento de características visuales de mascotas mediante visión por computadora combinado con alertas geolocalizadas.</p>
+          </div>
+          <div class="mini-stat">
+            <strong>Impacto &amp; Emprendimiento</strong>
+            <p>Proyecto estructurado con validación de usuarios y plan de negocio para incubación universitaria (Incuba / EQUIPU).</p>
           </div>
         </div>
-      </div>
-    </main>
+      </article>
 
-    <footer class="site-footer">
-      <div class="container text-center">
-        <p class="mb-1"><strong><?php echo $perfil["nombre"]; ?></strong> &mdash; Blog Personal 2026</p>
-        <p class="mb-2">Ingeniería de Sistemas e Informática &bull; Universidad Nacional del Santa</p>
-        <p class="mb-0"><a href="#inicio" class="text-white">Volver arriba &uarr;</a></p>
-      </div>
-    </footer>
+      <!-- Otros Proyectos en 2 columnas -->
+      <div class="two-columns">
+        <article class="card">
+          <p class="meta">Proyecto de Tesis · Web &amp; Gestión Documental</p>
+          <h3>Sistema Web UGEL Santa</h3>
+          <p class="copy">Plataforma web desarrollada con PHP y MySQL bajo arquitectura en capas y metodología Scrum para optimizar el seguimiento, registro y atención de expedientes en el Área de Actas y Certificados de la UGEL Santa.</p>
+          <ul class="tags">
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>Arquitectura en Capas</li>
+            <li>Scrum</li>
+          </ul>
+        </article>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+        <article class="card">
+          <p class="meta">SaaS &amp; Inteligencia Artificial</p>
+          <h3>RestaurantCloud AI</h3>
+          <p class="copy">Plataforma web multi-tenant desplegada con PostgreSQL y Docker que incorpora pronóstico de demanda, recomendaciones inteligentes de inventario y un asistente generativo para la gestión operativa de restaurantes.</p>
+          <ul class="tags">
+            <li>PostgreSQL</li>
+            <li>Docker</li>
+            <li>SaaS Multi-tenant</li>
+            <li>IA Generativa</li>
+          </ul>
+        </article>
+
+        <article class="card soft">
+          <p class="meta">Hackatón TransformaGob 2026 · PCM</p>
+          <h3>BarraCero · Alerta Albarracina</h3>
+          <p class="copy">Solución cívica desarrollada junto al equipo Brain Master para el reto de respuesta ciudadana impulsado por el Laboratorio de Gobierno y Transformación Digital.</p>
+          <ul class="tags">
+            <li>Innovación Pública</li>
+            <li>Trabajo Colaborativo</li>
+            <li>Prototipado Rápido</li>
+          </ul>
+        </article>
+
+        <article class="card soft">
+          <p class="meta">Arquitectura Empresarial</p>
+          <h3>Modernización Tributaria Municipal</h3>
+          <p class="copy">Modelado de arquitectura empresarial con TOGAF ADM y ArchiMate (capas de motivación, aplicación y tecnología) orientado a modernizar la administración tributaria en la Municipalidad Distrital de Nuevo Chimbote.</p>
+          <ul class="tags">
+            <li>TOGAF ADM</li>
+            <li>ArchiMate</li>
+            <li>Gestión Pública</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Experiencia y Pasantías -->
+    <section class="wrap section" id="experiencia" aria-labelledby="titulo-experiencia">
+      <h2 id="titulo-experiencia">Experiencia y pasantías</h2>
+      <p class="section-intro">Formación práctica en instituciones públicas, movilidad académica internacional y talleres de emprendimiento tecnológico.</p>
+
+      <div class="two-columns">
+        <article class="card">
+          <p class="meta">Movilidad Internacional · Tenerife, España</p>
+          <h3>Universidad de La Laguna (ULL)</h3>
+          <p class="copy">Estancia académica internacional e intercambio universitario en España, incluyendo visitas técnicas al Centro de Procesamiento de Datos (CPD) y actividades de integración académica en ingeniería informática.</p>
+          <ul class="tags">
+            <li>Intercambio Internacional</li>
+            <li>Infraestructura CPD</li>
+            <li>2025</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <p class="meta">Prácticas Pre-Profesionales · Nuevo Chimbote</p>
+          <h3>UGEL Santa · Área de Actas y Certificados</h3>
+          <p class="copy">Soporte administrativo, gestión documentaria, orientación ciudadana, control de expedientes en Excel y asistencia técnica básica al personal administrativo en la Unidad de Gestión Educativa Local del Santa.</p>
+          <ul class="tags">
+            <li>Trámite Documentario</li>
+            <li>Gestión en Excel</li>
+            <li>Soporte al Usuario</li>
+          </ul>
+        </article>
+
+        <article class="card soft">
+          <p class="meta">Movilidad Nacional · Arequipa, Perú</p>
+          <h3>Pasantía Universitaria Nacional</h3>
+          <p class="copy">Programa de intercambio y pasantía académica realizado en Arequipa durante el 2026, fortaleciendo competencias de investigación, análisis y trabajo multidisciplinario.</p>
+          <ul class="tags">
+            <li>Movilidad Académica</li>
+            <li>2026</li>
+          </ul>
+        </article>
+
+        <article class="card soft">
+          <p class="meta">Emprendimiento &amp; Innovación · EQUIPU</p>
+          <h3>Laboratorio de Emprendimientos 2026</h3>
+          <p class="copy">Participación en talleres especializados de validación con clientes, modelos de negocio, marketing digital y presentaciones pitch para proyectos tecnológicos universitarios.</p>
+          <ul class="tags">
+            <li>Validación de Producto</li>
+            <li>Pitch &amp; Startups</li>
+            <li>EQUIPU</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección Bitácora / Reflexiones -->
+    <section class="wrap section" id="blog" aria-labelledby="titulo-blog">
+      <h2 id="titulo-blog">Notas de décimo ciclo</h2>
+      <p class="section-intro">Reflexiones breves sobre datos, desarrollo de software y lo que significa cerrar la etapa universitaria.</p>
+
+      <div class="two-columns">
+        <article class="card">
+          <p class="meta">Análisis de Datos · 15 Nov 2026</p>
+          <h3>¿Por qué me interesa el análisis de datos en Sistemas?</h3>
+          <p class="copy">A lo largo de la carrera construimos bases de datos y aplicaciones, pero interpretar qué nos dicen los datos para mejorar procesos reales y apoyar la toma de decisiones es donde encuentro mayor impacto.</p>
+        </article>
+
+        <article class="card">
+          <p class="meta">Cloud &amp; Web · 18 Nov 2026</p>
+          <h3>De local a la nube: desplegando portafolios en Vercel</h3>
+          <p class="copy">Llevar un proyecto desde nuestro entorno local hacia GitHub y publicarlo con despliegue continuo en Vercel permite compartir nuestro trabajo técnico de manera limpia, rápida y profesional.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección CV -->
+    <section class="wrap section" id="cv" aria-labelledby="titulo-cv">
+      <div class="cv-heading">
+        <div>
+          <h2 id="titulo-cv">Currículum Vitae</h2>
+          <p class="section-intro">Resumen académico, competencias técnicas y herramientas que manejo en desarrollo y análisis.</p>
+        </div>
+        <button class="button" id="print-cv" type="button" onclick="window.print()">Imprimir / Guardar PDF</button>
+      </div>
+
+      <p class="print-name">Diarly Tatiana Cabanillas Polo — Ingeniería de Sistemas e Informática</p>
+
+      <div class="resume">
+        <div class="resume-side">
+          <h3>Formación Académica</h3>
+          <ul class="resume-list">
+            <li>
+              <strong>Ingeniería de Sistemas e Informática (10.º ciclo)</strong>
+              <span>Universidad Nacional del Santa (UNS) · Nuevo Chimbote, Perú</span>
+            </li>
+            <li>
+              <strong>Estancia Académica Internacional</strong>
+              <span>Universidad de La Laguna (ULL) · Tenerife, España (2025)</span>
+            </li>
+            <li>
+              <strong>Pasantía Universitaria Nacional</strong>
+              <span>Programa de Movilidad Académica · Arequipa, Perú (2026)</span>
+            </li>
+          </ul>
+
+          <h3>Experiencia y Participación</h3>
+          <ul class="resume-list">
+            <li>
+              <strong>Practicante Pre-Profesional · Área de Actas y Certificados</strong>
+              <span>UGEL Santa · Gestión documentaria, atención al usuario y soporte técnico</span>
+            </li>
+            <li>
+              <strong>Desarrolladora &amp; Líder de Proyecto · PetPoint</strong>
+              <span>Aplicación móvil Android en Kotlin con integración de IA y geolocalización</span>
+            </li>
+            <li>
+              <strong>Participante · Hackatón TransformaGob 2026 &amp; EQUIPU</strong>
+              <span>Desarrollo de prototipos cívicos y validación de emprendimientos tecnológicos</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="resume-side skills">
+          <h3>Habilidades Técnicas</h3>
+          <dl>
+            <div>
+              <dt>Lenguajes</dt>
+              <dd>Kotlin, PHP, Python, SQL, JavaScript, HTML/CSS</dd>
+            </div>
+            <div>
+              <dt>Móvil &amp; Web</dt>
+              <dd>Android Studio (MVVM, Room), Laragon, Bootstrap</dd>
+            </div>
+            <div>
+              <dt>Bases de Datos</dt>
+              <dd>MySQL, PostgreSQL, Firebase Firestore</dd>
+            </div>
+            <div>
+              <dt>Datos &amp; Oficina</dt>
+              <dd>Excel avanzado (tablas dinámicas), Google Colab</dd>
+            </div>
+            <div>
+              <dt>Cloud &amp; Sistemas</dt>
+              <dd>Google Cloud (Compute Engine), Docker, Linux, Git</dd>
+            </div>
+            <div>
+              <dt>Arquitectura &amp; UX</dt>
+              <dd>TOGAF, ArchiMate, Bizagi, Figma, Canva</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>&copy; 2026 Diarly Tatiana Cabanillas Polo · Nuevo Chimbote, Perú</p>
+      <p>
+        <a href="mailto:tatiana.cp.ing@gmail.com">tatiana.cp.ing@gmail.com</a> &middot;
+        <a href="https://github.com/DiarlyCP" target="_blank" rel="noopener">GitHub</a> &middot;
+        <a href="#inicio">Subir &uarr;</a>
+      </p>
+    </div>
+  </footer>
+</body>
 </html>
