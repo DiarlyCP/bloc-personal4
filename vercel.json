@@ -5,6 +5,8 @@
     }
   },
   "routes": [
-    { "src": "/(.*)",  "dest": "/api/index.php" }
+    { "src": "/Foto%20cv%201.png", "dest": "/Foto cv 1.png" },
+    { "src": "/Foto cv 1.png", "dest": "/Foto cv 1.png" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
